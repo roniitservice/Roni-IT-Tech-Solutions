@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Roni IT & Tech Solutions</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roni IT & Tech Solutions - Cyber Security & KYC</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -13,68 +13,65 @@
       <a href="#about">About Us</a>
       <a href="#services">Services</a>
       <a href="#testimonials">Testimonials</a>
-      <a href="#booking">Booking</a>
-      <a href="#" onclick="logout()">Logout</a>
+      <a href="#booking">Book Now</a>
+      <a href="#login" id="loginBtn">Login</a>
+      <a href="#" id="logoutBtn" style="display:none;">Logout</a>
     </nav>
   </header>
 
-  <section class="login" id="login">
-    <h2>Login</h2>
-    <form onsubmit="return login(event)">
-      <input type="text" id="username" placeholder="Username" required />
-      <input type="password" id="password" placeholder="Password" required />
-      <button type="submit">Login</button>
-    </form>
-    <p id="login-error" class="error"></p>
+  <section id="home">
+    <img src="https://via.placeholder.com/800x400?text=KYC+Security" alt="KYC" class="kyc-image">
+    <h2>Your Trusted Partner in Cyber Security & KYC Solutions</h2>
   </section>
 
-  <main id="main-content" style="display:none;">
-    <section id="About Us">
-      <h2>About Us</h2>
-      <p>Based in Tangail, Roni IT & Tech Solutions provides modern IT and KYC services tailored for the finance sector. Our mission is to empower professionals with secure, scalable, and efficient tech tools.</p>
-      <p><strong>Address:</strong> Aziz Plaza Market (2nd Floor), Victoria Road, Tangail</p>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are committed to providing top-notch cyber security and KYC solutions for individuals and businesses. Our mission is to secure digital identities with precision and trust.</p>
+    <p><strong>Address:</strong> Aziz Plaza Market (2nd Floor), Victoria Road, Tangail-1900, Tangail</p>
       <p><strong>Email:</strong> info.roniitandtechsolutions@gmail.com</p>
       <p><strong>Phone Number:</strong> 01603712048</p>
-    </section>
+  </section>
 
-    <section id="services">
-      <h2>Our Tools & Services</h2>
-      <ul>
-        <li>Website & E-commerce Development</li>
-        <li>Custom Software for Financial Analysis</li>
-        <li>Cybersecurity & Data Protection</li>
-        <li>KYC & Compliance Verification Tools</li>
-        <li>Cloud Hosting & Infrastructure</li>
-        <li>IT Support & Maintenance</li>
-      </ul>
-    </section>
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Digital KYC Verification</li>
+      <li>Endpoint Protection</li>
+      <li>Penetration Testing</li>
+      <li>Real-time Fraud Detection</li>
+    </ul>
+  </section>
 
-    <section id="testimonials">
-      <h2>Customer Testimonials</h2>
-      <blockquote>
-        "Roni IT helped streamline our KYC onboarding with precision and security."  
-        <cite>- Roni Ahmed, FinTech Advisor</cite>
-      </blockquote>
-      <blockquote>
-        "Excellent support, fast deployment, and a true partner in technology!"  
-        <cite>- Nusrat Jahan, Financial Analyst</cite>
-      </blockquote>
-    </section>
+  <section id="testimonials">
+    <h2>Customer Testimonials</h2>
+    <blockquote>"Roni IT & Tech Solutions helped us secure our platform in days. Incredible support!" – Roni Ahmed, Startup Founder</blockquote>
+    <blockquote>"Their KYC tool is fast and reliable. Highly recommended." – Nusrat Jahan, FinTech COO</blockquote>
+  </section>
 
-    <section id="booking">
-      <h2>Book a Consultation</h2>
-      <form id="booking-form">
-        <input type="text" placeholder="Full Name" required />
-        <input type="email" placeholder="Email Address" required />
-        <input type="text" placeholder="Company (Optional)" />
-        <textarea placeholder="Your Message or Request" required></textarea>
-        <button type="submit">Submit Booking</button>
-      </form>
-    </section>
-  </main>
+  <section id="booking">
+    <h2>Book a Consultation</h2>
+    <form id="bookingForm">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Company (optional)">
+      <textarea placeholder="Message or Request..." required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section id="login" class="login-section">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p id="loginMessage"></p>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Roni IT & Tech Solutions</p>
+    <p>Follow us on <a href="https://www.facebook.com/RoniIT&TechSolutions" target="_blank">Facebook</a></p>
+    <p>&copy; 2025E Roni IT & Tech Solutions</p>
   </footer>
 
   <script src="script.js"></script>
