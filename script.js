@@ -1,28 +1,34 @@
+function showLogin() {
+  document.getElementById("login-modal").style.display = "flex";
+}
 
-document.getElementById("loginForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+function login() {
   const user = document.getElementById("username").value;
   const pass = document.getElementById("password").value;
+  const error = document.getElementById("login-error");
 
   if (user === "admin" && pass === "password123") {
-    document.getElementById("loginMessage").innerText = "Login successful!";
-    document.getElementById("logoutBtn").style.display = "inline";
-    document.getElementById("loginBtn").style.display = "none";
-    document.querySelector(".login-section").style.display = "none";
+    localStorage.setItem("loggedIn", "true");
+    alert("Login successful!");
+    document.getElementById("login-modal").style.display = "none";
   } else {
-    document.getElementById("loginMessage").innerText = "Invalid credentials.";
+    error.textContent = "Invalid credentials!";
   }
-});
+}
 
-document.getElementById("logoutBtn").addEventListener("click", function() {
-  document.getElementById("loginMessage").innerText = "";
-  document.getElementById("loginBtn").style.display = "inline";
-  document.getElementById("logoutBtn").style.display = "none";
-  document.querySelector(".login-section").style.display = "block";
-});
+function logout() {
+  localStorage.removeItem("loggedIn");
+  alert("You have been logged out.");
+}
 
-document.getElementById("bookingForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  alert("Booking submitted. We'll contact you soon!");
-  this.reset();
+window.onload = () => {
+  if (localStorage.getItem("loggedIn") === "true") {
+    alert("Welcome back, admin!");
+  }
+};
+
+// Optional: Close modal on outside click
+window.addEventListener("click", function (e) {
+  const modal = document.getElementById("login-modal");
+  if (e.target === modal) modal.style.display = "none";
 });
